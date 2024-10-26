@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Employee Work Logs</h1>
+    <form action="/admin_dashboard" method="post">
+        Employee Name: <input type="text" name="employee_name" required>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if logs %}
+        <h2>Logs for {{ request.form.employee_name }}</h2>
+        <ul>
+            {% for log in logs %}
+                <li>{{ log.date }}: {{ log.hours }} hours, Not applicable: {{ log.not_applicable }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

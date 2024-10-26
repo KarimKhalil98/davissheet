@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Employee Work Log</title>
+</head>
+<body>
+    <h1>Submit Work Log</h1>
+    <form action="/employee" method="post">
+        Name: <input type="text" name="name" required><br>
+        Ticket Number: <input type="text" name="ticket_number" required><br>
+        Location: <input type="text" name="location" required><br>
+        Work Order: <input type="text" name="wo_number" required><br>
+        Week Start: <input type="date" name="week_start" required><br>
+        Week End: <input type="date" name="week_end" required><br>
+        
+        <h2>Daily Hours</h2>
+        <!-- Repeat these inputs dynamically based on the date range -->
+        <div id="days"></div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+<script>
+    // Populate days for the work period and add hours/not applicable fields.
+</script>
+</html>
